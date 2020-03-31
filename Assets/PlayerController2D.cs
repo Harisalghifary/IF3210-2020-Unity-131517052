@@ -79,6 +79,7 @@ public class PlayerController2D : MonoBehaviour
             animator.Play("Player_shoot");
             GameObject bullet = (GameObject)Instantiate(bulletRef);
             bullet.transform.position = new Vector3(transform.position.x + 3, transform.position.y + 1.8f, -1);
+            spriteRenderer.flipX = true;
         }
         animator.Play(queuedAnim);
     }
